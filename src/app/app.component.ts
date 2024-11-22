@@ -17,11 +17,13 @@ export class AppComponent {
   users = DUMMY_USERS
 
   // nameforTask:String='please select the user';
-  nameforTask?:String;
+  nameforTask?:string;
+  userId!:string;
 
   onSelectUser(id:String){
     console.log('user selected with id ' + id);
     let foundUser = this.users.find(user=>user.id===id);
+    this.userId = foundUser?.id?foundUser.id:" ";
     this.nameforTask = foundUser?foundUser.name:" ";
   }
 

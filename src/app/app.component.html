@@ -76,7 +76,7 @@
   </ul>
 
   @if (nameforTask) {
-    <app-task [name]="nameforTask"></app-task>
+    <app-task [name]="nameforTask" [userId]="userId"></app-task>
   }@else {
     <p id="fallback">Please select the user ..!!</p>
   }
